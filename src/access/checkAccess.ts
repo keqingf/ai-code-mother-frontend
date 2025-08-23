@@ -12,6 +12,7 @@ const checkAccess = (loginUser: any, needAccess = ACCESS_ENUM.NOT_LOGIN) => {
   if (needAccess === ACCESS_ENUM.NOT_LOGIN) {
     return true;
   }
+
   // 如果用户登录才能访问
   if (needAccess === ACCESS_ENUM.USER) {
     // 如果用户没登录，那么表示无权限
