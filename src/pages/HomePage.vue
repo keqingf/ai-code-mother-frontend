@@ -5,6 +5,7 @@ import { message } from 'ant-design-vue'
 import { useLoginUserStore } from '@/stores/loginUser'
 import { addApp, listMyAppVoByPage, listGoodAppVoByPage } from '@/api/appController'
 import { getDeployUrl } from '@/config/env'
+import { SendOutlined } from '@ant-design/icons-vue';
 import AppCard from '@/components/AppCard.vue'
 
 const router = useRouter()
@@ -177,7 +178,7 @@ onMounted(() => {
         <div class="input-actions">
           <a-button type="primary" size="large" @click="createApp" :loading="creating">
             <template #icon>
-              <span>↑</span>
+              <SendOutlined :rotate="270" />
             </template>
           </a-button>
         </div>
